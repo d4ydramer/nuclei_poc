@@ -5,18 +5,17 @@ info:
   author: pikpikcu
   severity: info
   metadata:
-    max-request: 1
     verified: true
     shodan-query: http.title:"AVideo"
     fofa-query: "AVideo"
   tags: tech,avideo
 
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}"
 
-    host-redirects: true
+    redirects: true
     max-redirects: 2
     matchers-condition: and
     matchers:

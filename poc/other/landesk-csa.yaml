@@ -1,20 +1,16 @@
 id: landesk-csa
-
 info:
   name: LANDESK(R) Cloud Services Appliance Detect
   author: 0xNirvana
   severity: info
   metadata:
-    max-request: 1
     verified: true
     shodan-query: http.html:"LANDESK(R)"
-  tags: tech,landesk
-
-http:
+  tags: technology,landesk
+requests:
   - method: GET
     path:
       - "{{BaseURL}}"
-
     matchers:
       - type: word
         part: body

@@ -5,12 +5,11 @@ info:
   author: JustaAcat
   severity: info
   metadata:
-    max-request: 1
-    verified: true
+    verified: "true"
     shodan-query: title:"Web Viewer for Samsung DVR"
   tags: panel,web-viewer,detect
 
-http:
+requests:
   - method: GET
     path:
       - '{{BaseURL}}'

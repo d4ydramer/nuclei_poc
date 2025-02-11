@@ -1,34 +1,15 @@
+# info to search signature
 id: php-debug-bar
-
 info:
-  name: PHP Debug Bar
-  author: dhiyaneshDk
-  severity: high
-  description: The PHP Debug Bar tool was discovered, which allows the attacker to obtain sensitive information, e.g. application configuration.
-  tags: debug,logs,exposure
-  metadata:
-    max-request: 1
+  name: PHP Debug bar
+  risk: High
 
-http:
+requests:
   - method: GET
-    path:
-      - "{{BaseURL}}/_debugbar/open?max=20&offset=0"
+    redirect: true
+    url: >-
+      {{.BaseURL}}/_debugbar/open?max=20&offset=0
+    detections:
+      - >-
+        StatusCode() == 200 && StringSearch("response", '{"id":"')
 
-    matchers-condition: and
-    matchers:
-      - type: status
-        status:
-          - 200
-
-      - type: word
-        words:
-          - '"id":"'
-          - '"datetime":'
-          - '"method"'
-        condition: and
-        part: body
-
-      - type: word
-        words:
-          - "application/json"
-        part: header

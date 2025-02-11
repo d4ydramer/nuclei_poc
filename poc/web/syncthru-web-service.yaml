@@ -1,23 +1,17 @@
 id: syncthru-web-service
 
 info:
-  name: SyncThru Web Service Panel - Detect
+  name: SyncThru Web Service
   author: DhiyaneshDk
-  severity: info
-  description: SyncThru Web Service panel was detected.
+  severity: low
   reference:
     - https://www.exploit-db.com/ghdb/7843
-  classification:
-    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0.0
-    cwe-id: CWE-200
   metadata:
-    max-request: 1
     verified: true
     shodan-query: title:"SyncThru Web Service"
   tags: edb,panel,syncthru,printer
 
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}/sws/index.sws"
@@ -36,5 +30,3 @@ http:
       - type: status
         status:
           - 200
-
-# Enhanced by md on 2023/01/18
