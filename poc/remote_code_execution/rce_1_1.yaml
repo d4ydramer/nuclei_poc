@@ -3,8 +3,7 @@ id: LFI-RCE
 info:
   name: LFI Detection
   author: 0x240x23elu & payloadallthings
-  severity: High
-
+  severity: high
 requests:
   - method: GET
 

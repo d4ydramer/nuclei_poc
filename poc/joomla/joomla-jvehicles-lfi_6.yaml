@@ -11,10 +11,10 @@ info:
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N
     cvss-score: 8.6
-    cwe-id: CWE-22
+    cwe-id: CWE-23
   metadata:
     max-request: 1
-  tags: joomla,lfi,edb
+  tags: joomla,lfi,edb,vuln
 
 http:
   - method: GET
@@ -30,4 +30,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a0046304402205da336c8cab7bb1083f77ed558b7cd2f4ff2cf882adff35dc638607f6230d1a802207b0ccc2cea89d0b716ea05002d7025d72733abb4c8bc66fd251bbf5df5e93cc4:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100e03ca26e4feb782392a74596f4e88f1b1df660d32847865bd5d0dbab8483a47a022100c29b633a3cb88e76f30310c5553bdb43498ce24d01600cdabb813b62ca6408c1:922c64590222798bb761d5b6d8e72950

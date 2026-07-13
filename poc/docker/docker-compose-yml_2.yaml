@@ -3,7 +3,7 @@ id: docker-compose-yml
 info:
   name: Docker Compose Check
   author: SirBugs
-  severity: high
+  severity: critical
   description: Checks for common Docker Compose configuration keys.
 
 http:
@@ -19,4 +19,3 @@ http:
           - "MYSQL_ROOT_PASSWORD"
           - "# Mount source-code"
         part: body
-        condition: or
