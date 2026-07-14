@@ -5,6 +5,8 @@ info:
   tags: detect,tech,soap,service
   severity: info
   metadata:
+    hostname: $2
+    info: Good Messaging Server gddomsyncsrv
     product: gsoap
     rarity: 1
     vendor: genivia
@@ -21,4 +23,4 @@ tcp:
   - name: soap
     type: regex
     regex:
-    - '^HTTP/1\.1 401 Unauthorized\r\nWWW-Authenticate: Digest realm=\"realtek\.com\.tw\", qop=\"auth\", nonce=\"[0-9a-f]+\", opaque=\"[0-9a-f]+\"\r\nServer: gSOAP/([\w._-]+)\r\n'
+    - '(?i)^HTTP/1\.0 500 Internal Server Error\r\nServer: gSOAP/([\w._-]+)\r\n.* xmlns:gmmiws=\"https://([\w._-]+):\d+/glsinternal\.wsdl\" .*<faultstring>HTTP GET method not implemented</faultstring>'

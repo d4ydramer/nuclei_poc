@@ -20,4 +20,4 @@ tcp:
   - name: h.323-gatekeeper-discovery
     type: regex
     regex:
-    - ^8\x02\x01\x10\x00$
+    - ^8\x02\x01\x10\0$

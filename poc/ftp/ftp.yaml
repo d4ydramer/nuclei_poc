@@ -1,15 +1,13 @@
 id: ftp
 info:
-  name: VMware Pivotal Web Server mod_ftpd
+  name: WebGate $2 eDVR camera ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    info: Dell EMC Unity Secure Remote Services Gateway
-    product: pivotal_web_server
+    device_type: webcam
     rarity: 0
-    vendor: pivotal
-    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220-Welcome to ESRS Gateway FTP service\.\r\n220 httpdftp FTP Server \(Apache PivotalWebServer\) ready\.\r\n
+    - ^ftpd - accept the connection from [\d.]+\n220-eDVR FTP Server v([\d.]+) \(c\)Copyright WebGate Inc\. \w+-\w+\r\n220-Welcome to (DS\w+)\r\n220 You will be disconnected after 180 seconds of inactivity\.\r\n

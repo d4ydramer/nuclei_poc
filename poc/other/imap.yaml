@@ -1,11 +1,10 @@
 id: imap
 info:
-  name: hMailServer imapd
+  name: Plesk Courier imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    operating_system: Windows
     rarity: 1
 tcp:
 - name: get-request
@@ -18,4 +17,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK .*\r\nGET BAD Unknown or NULL command\r\n BAD NULL COMMAND\r\n
+    - ^\* OK \[CAPABILITY IMAP4rev1 [^]]*\]\r\nGET NO Error in IMAP command received by server\.\r\n\* NO Error in IMAP command received by server\.\r\n

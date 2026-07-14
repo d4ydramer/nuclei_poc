@@ -1,12 +1,14 @@
 id: finger
 info:
-  name: Linux fingerd
+  name: XMail fingerd
   author: nmap,cn-kali-team
   tags: detect,tech,finger,service
   severity: info
   metadata:
-    operating_system: Linux
+    product: xmail
     rarity: 1
+    vendor: davide_libenzi
+    verified: true
 tcp:
 - name: get-request
   inputs:
@@ -18,4 +20,4 @@ tcp:
   - name: finger
     type: regex
     regex:
-    - '^finger: GET: no such user.\r\nfinger: /: no such user.\r\nfinger: HTTP/1.0: no such user.\r\n$'
+    - ^User not found\r\n
