@@ -19,7 +19,7 @@ info:
     google-query: inurl:/web-console/ServerInfo.jsp | inurl:/status?full=true
     product: jboss_enterprise_application_platform
     vendor: redhat
-  tags: jboss,unauth,edb,misconfig,vuln
+  tags: jboss,unauth,edb,misconfig
 
 http:
   - method: GET
@@ -37,4 +37,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022005479a72043130f21ab5b2ec89f314e00afc3e79edb31393edc2e6ea80c4b400022100912d17fa7d310f469867447590c750c182097b9797e401a9d09d19b058f14d65:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100ec17f308e6b90066829b043d26f5870b7a6e5d769259820e0d97babeb784bd07022100ffb1f77f58fc487b6bf58514062dc08d1c2df475d0103d1f4699c9be28621746:922c64590222798bb761d5b6d8e72950
